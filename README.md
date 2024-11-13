@@ -25,15 +25,15 @@ The `virus.py` script acts as a backdoor, designed to be executed on a target ma
 #### Execution
 
 - **Linux**: Execute `virus.py` by navigating to the backdoor directory and running the file.
-  '''bash
+  ```bash
   cd backdoor
   python3 virus.py
-  '''
+  ```
 - **Windows**: To create an executable for Windows, use `pyinstaller` to package `virus.py` into a standalone `.exe` file. This command creates a discreet `.exe` file without a console window, simplifying deployment for authorized testing purposes.
-  '''bash
+  ```bash
   cd backdoor
   pyinstaller virus.py --onefile --noconsole
-  '''
+  ```
 
 ---
 
@@ -44,9 +44,10 @@ The `server.py` file acts as the C2 server for the `virus.py` backdoor. Running 
 #### Execution
 
 - **Linux**: Run the server on a Linux system to ensure compatibility and stability. The server waits for incoming connections and, upon connection, enables controlled interaction with connected clients. Commands entered on the server are executed on the client, and the responses are sent back for review.
-  '''bash
+  ```bash
   cd backdoor
   python3 server.py
+  ```
 
 ---
 
@@ -73,8 +74,9 @@ Ensure Python 3 is installed on both the server and client machines. To package 
 ### Setup Instructions
 
 1. **Download the Repository**: Clone the repository to your local machine.
-   '''bash
+   ```bash
    git clone https://github.com/pryaaansu/backdoor
+   ```
 
 3. **Start the Server**: Begin by running `server.py` on a server machine.
 
